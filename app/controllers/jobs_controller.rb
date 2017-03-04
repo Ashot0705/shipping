@@ -13,9 +13,13 @@ class JobsController < ApplicationController
 
 	def create
 		@job = Job.new(jobs_params)
-		@job.save
+		if @job.save
 
 		redirect_to job_path(@job)
+	else
+		flash[:notice] = @job.errors
+		redirect_to :back
+	end
 	end
 
 	def edit
