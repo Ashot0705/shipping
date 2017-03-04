@@ -1,0 +1,19 @@
+<%= form_for @boat do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<br>
+<br>
+
+<%= f.label :location %>
+<%= f.select :location, [ "Miami", "New York", "Houston", "Newark", "Tampa", "Seattle" ], :prompt => "Select Location" %>
+<br>
+<br>
+
+<%= f.label :quantity %>
+<%= f.text_field :quantity %>
+<br>
+<br>
+
+<%= f.submit :disable_with => 'Submiting...' %>
+
+<% end %>
