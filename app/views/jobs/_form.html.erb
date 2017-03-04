@@ -1,0 +1,27 @@
+<%= form_for @job do |f| %>
+
+	<%= f.label :description %>
+		<%= f.select :description, [ "Vehicles & Boats", "Household Items", "Animals", "Freight", "Other" ], :prompt => "Select Item" %> <%= flash_for_field("description") %>
+
+	<br>
+	<br>
+	
+		<%= f.label :origin %>
+		<%= f.select :origin, [ "Miami", "New York", "Houston", "Newark", "Tampa", "Seattle" ], :prompt => "Select Origin" %> <%= flash_for_field("origin") %>
+
+		<br>
+		<br>
+
+			<%= f.label :destination %>
+		<%= f.select :destination, [ "Cincinnati", "Texas City", "Cleveland", "Miami", "New York", "Houston"], :prompt => "Select Destination" %> <%= flash_for_field("destination") %>
+
+			<br>
+		<br>
+
+		<%= f.label :quantity %>
+		<%= f.select :quantity, options_for_select(1..10), :prompt => "Select Quantity" %> <%= flash_for_field("quantity") %>
+
+		<br>
+		<br>
+		<%= f.submit %>
+		<% end %>

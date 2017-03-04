@@ -1,0 +1,11 @@
+<h1>This is a index action page of Jobs controller</h1>
+<ul>
+
+	<% @jobs.each do |job| %>
+		<li>
+			<%= link_to job.description, job_path(job) %>
+		</li>
+	<% end %>
+</ul>
+
+<%= link_to "Create a new job", new_job_path %>

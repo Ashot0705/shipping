@@ -1,0 +1,25 @@
+<table>
+	<thead>
+		<tr>
+			<th>Description</th>
+			<th>Origin</th>	
+			<th>Destination</th>	
+			<th>Quantity</th>	
+			<th>Cost</th>	
+		</tr>
+	</thead>
+
+	<tbody>
+
+		<tr>
+			<td><h4> <%= @job.description %> </h4></td>
+			<td><h4> <%= @job.origin %> </h4></td>
+			<td><h4> <%= @job.destination %> </h4></td>
+			<td><h4> <%= @job.quantity %> </h4></td>
+			<td><h4> <%= number_to_currency@job.cost %> </h4></td>
+			<td><h4> <%= link_to "delete", job_path, method: :delete %> </h4></td>
+			<td><h4> <%= link_to "Edit", edit_job_path %></h4></td>
+
+		</tr>
+	</tbody>
+</table>	
