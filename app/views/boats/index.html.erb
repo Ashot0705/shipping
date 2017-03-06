@@ -1,11 +1,9 @@
 <h1>Boats:</h1>
 <p>
-	<h2>
-		<% @boats.each do |boat| %>
-		<%= boat.name %>
-		<% end %>
-	</h2>
+<h2>
+	<% @boats.each do |boat| %>
+	<%= boat.name %>
+	<% end %>
+</h2>
 </p>
-
-<%= link_to "create a boat", new_boat_path %>
 
