@@ -15,10 +15,18 @@ class BoatsController < ApplicationController
 		@boat = Boat.new(boats_params)
 		if @boat.save
 
-			redirect_to boat_path(@boat)
+			redirect_to job_path(@jobs)
 		else
 			redirect_to :back
 		end
+	end
+
+	def destroy
+		@boat = Boat.find(params[:id])
+		@boat.destroy
+
+		redirect_to root_path
+		
 	end
 
 	private

@@ -5,7 +5,8 @@
 			<th>Origin</th>	
 			<th>Destination</th>	
 			<th>Quantity</th>	
-			<th>Cost</th>	
+			<th>Cost</th>
+			<th>Boats</th>	
 		</tr>
 	</thead>
 
@@ -17,6 +18,8 @@
 			<td><h4> <%= @job.destination %> </h4></td>
 			<td><h4> <%= @job.quantity %> </h4></td>
 			<td><h4> <%= number_to_currency@job.cost %> </h4></td>
+			<td><h4> <%= @job.boats.map(&:name).join(", ") %></h4></td>
+	
 			<td><h4> <%= link_to "delete", job_path, method: :delete %> </h4></td>
 			<td><h4> <%= link_to "Edit", edit_job_path %></h4></td>
 
@@ -24,5 +27,17 @@
 	</tbody>
 </table>	
 
-<h4> <%= link_to "Select a boat", boats_path %></h4>
+<%= form_tag("/select-boat") do %>
+	<%= select_tag "boat_id", options_for_select(Boat.where(location: @job.origin).map { |boat| [boat.name, boat.id]}) %>
+	<%= hidden_field_tag "job_id", @job.id %>
+	<%= submit_tag "Submit", :disable_with => 'Submiting...' %>
+<% end %>
+
+<% if @job.boats.empty? %>
+	<%= link_to "create a boat", new_boat_path %>
+<% end %>
+
+
+
+
 <h4> <%= link_to "Go back", root_path %></h4>

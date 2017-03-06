@@ -9,6 +9,7 @@ class JobsController < ApplicationController
 
 	def show
 		@job = Job.find(params[:id])
+
 	end
 
 	def create
@@ -21,6 +22,24 @@ class JobsController < ApplicationController
 		redirect_to :back
 	end
 	end
+
+	def select_boat
+		# make a new job boat
+		# set the jobboat's boat_id to the boat from the form
+		# set the job_id to the job_id to the current job
+		# save the job boat
+		# redirect to back
+		@jobboat = Jobboat.new
+		@jobboat.boat_id = params["boat_id"]
+		@jobboat.job_id = params["job_id"]
+
+		@jobboat.save
+		redirect_to :back
+
+	end
+
+
+	
 
 	def edit
 		@job = Job.find(params[:id])

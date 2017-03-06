@@ -2,10 +2,9 @@
 <p>
 	<h2>
 		<% @boats.each do |boat| %>
-		<%= boat.name %>
+		<li><%= boat.name %></li>
 		<% end %>
 	</h2>
 </p>
-
 <%= link_to "create a boat", new_boat_path %>
 
