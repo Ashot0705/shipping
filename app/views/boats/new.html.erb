@@ -1,11 +1,12 @@
 <%= form_for @boat do |f| %>
 <%= f.label :name %>
 <%= f.text_field :name %>
+<%= flash[:alert] if flash[:alert] %>
 <br>
 <br>
 
 <%= f.label :location %>
-<%= f.select :location, [ "Miami", "New York", "Houston", "Newark", "Tampa", "Seattle" ], :prompt => "Select Location" %>
+<%= f.select :location, [ "Miami", "Los Angeles", "New York", "Houston", "Newark", "Tampa", "Seattle" ], :prompt => "Select Location" %>
 <br>
 <br>
 

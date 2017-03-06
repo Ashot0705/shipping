@@ -7,6 +7,6 @@ class Job < ApplicationRecord
 
 	validates_numericality_of :cost, greater_than_or_equal_to: 1000
 
-	validates :description, length: { minimum: 50 }
+	validates :description, length: { minimum: 5 }
 
 end

@@ -16,7 +16,14 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+
 body {
 	padding-top: 40px;
 	margin:30px;
+
+}
+.modal {
+	display:none;
+	position:relative;
+	top: 10px;
 }

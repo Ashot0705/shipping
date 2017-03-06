@@ -9,7 +9,7 @@ class JobsController < ApplicationController
 
 	def show
 		@job = Job.find(params[:id])
-
+		@boat = Boat.new
 	end
 
 	def create

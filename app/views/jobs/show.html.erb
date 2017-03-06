@@ -34,8 +34,40 @@
 <% end %>
 
 <% if @job.boats.empty? %>
-	<%= link_to "create a boat", new_boat_path %>
+	<div class="create_button"> <%= link_to "create a boat", new_boat_path %>
+	</div>
 <% end %>
+
+	<div class="but">
+		<button type="button">create me</button>
+	</div>
+
+
+<div class="modal">
+	<%= form_tag("/sam") do %>
+
+		<%= label_tag "name" %>
+		<%= text_field_tag "name" %>
+		<%= flash[:alert] if flash[:alert] %>
+		<br>
+		<br>
+
+		<%= label_tag "location" %>
+		<%= select_tag "location", options_for_select([ "Miami", "Los Angeles", "New York", "Houston", "Newark", "Tampa", "Seattle" ]), :prompt => "Select Location" %>
+		<br>
+		<br>
+
+		<%= hidden_field_tag "job_id", value: @job.id %>
+
+		<%= label_tag "quantity" %>
+		<%= text_field_tag "quantity" %>
+		<br>
+		<br>
+
+		<%= submit_tag "Create a boat" %>
+
+	<% end %>
+</div>
 
 
 
