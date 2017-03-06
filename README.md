@@ -1,24 +1,49 @@
-# README
+# Express Shipping
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Objective
 
-Things you may want to cover:
+Create a Rails application for Express Shipping to help them organize all of the ships in their ﬂeet, with a user login system using the gem Devise. The application should be able to, at its most basic, allow users to:
 
-* Ruby version
+* Sign In and Sign Out
 
-* System dependencies
+* Create an account
 
-* Configuration
+* Create a boat
 
-* Database creation
+* Validations for account
 
-* Database initialization
+* Selections of Origins and Destinatons
 
-* How to run the test suite
+* add new boats to their account, meant to be managed by that user, including a boat name, amount of containers able to ship, and current boat location
 
-* Services (job queues, cache servers, search engines, etc.)
+## Jobs
 
-* Deployment instructions
+* must have a unique name
 
-* ...
+* cost must be greater than or equal to $1000 for each job
+
+* cargo description must be at least 50 characters
+
+* origin and destinations must be pulled from a valid list of locations (use a hard-coded list)
+
+## Boats
+
+* Must have a unique name
+
+* locations must be pulled from a valid list of locations (use a hard-coded list)
+
+## Adding Rails UJS and Paperclip
+
+* Using Rails UJS enable the user to add a boat to a job without reloading the page
+
+* Using the paperclip gem, give a user the ability to upload a photo of a ship when the ship is being created
+
+## Group Project
+
+### Members
+
+* Ashot Arutyunyan
+
+* Sam Almeida
+
+* An Ngo
