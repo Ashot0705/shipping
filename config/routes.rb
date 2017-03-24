@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :jobs
 
   post "/select-boat", to: "jobs#select_boat"
+
 end

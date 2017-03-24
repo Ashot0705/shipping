@@ -15,7 +15,7 @@ class BoatsController < ApplicationController
 		@boat = Boat.new(boats_params)
 		if @boat.save
 
-			redirect_to :back
+			redirect_to root_path
 		else
 			flash[:alert] = "this name is already taken"
 			redirect_to :back
