@@ -15,14 +15,55 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
-$("document").ready(function() {
 
 
-	$(".but").click(function() {
-	$(".modal").show(1000)
-	$(".but").hide()
-	
+$("document").ready(function(){
 
-})
+
+
+
+
+
+
+
+
+
+
+
+    var initialModal = new Custombox.modal({
+      content: {
+        effect: 'slip',
+        target: '.login_container'
+      }
+    });
+    initialModal.open();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 })

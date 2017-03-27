@@ -1,3 +1,5 @@
+<div class="signup_container">
+
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -22,8 +24,21 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up",  :class => "signup_button" %>
   </div>
 <% end %>
 
-<%= render "users/shared/links" %>
+<%= render "devise/shared/links" %>
+
+
+</div>
+
+<script>
+    var signupModal = new Custombox.modal({
+      content: {
+        effect: 'sign',
+        target: '.signup_container'
+      }
+    });
+  signupModal.open();
+</script>

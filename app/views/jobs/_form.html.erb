@@ -1,33 +1,49 @@
-<%= form_for @job do |f| %>
+<div class="jobForm">
 
-	<%= f.label :description %> <br>
-	<%= f.text_area :description %> <%= flash_for_field("description") %>
+	<%= form_for @job do |f| %>
 
-	<br>
-	<br>
+		<%= f.label :description %> <br>
+		<%= f.text_area :description %> <%= flash_for_field("description") %>
 
-	<%= f.label :origin %>
-	<%= f.select :origin, [ "Miami", "Los Angeles", "New York", "Houston", "Newark", "Tampa", "Seattle" ], :prompt => "Select Origin" %> <%= flash_for_field("origin") %>
+		<br>
+		<br>
 
-	<br>
-	<br>
+		<%= f.label :origin %>
+		<%= f.select :origin, [ "Miami", "Los Angeles", "New York", "Houston", "Newark", "Tampa", "Seattle" ], :prompt => "Select Origin" %> <%= flash_for_field("origin") %>
 
-	<%= f.label :destination %>
-	<%= f.select :destination, [ "Cincinnati", "Texas City", "Cleveland", "Miami", "New York", "Houston"], :prompt => "Select Destination" %> <%= flash_for_field("destination") %>
+		<br>
+		<br>
 
-	<br>
-	<br>
+		<%= f.label :destination %>
+		<%= f.select :destination, [ "Cincinnati", "Texas City", "Cleveland", "Miami", "New York", "Houston"], :prompt => "Select Destination" %> <%= flash_for_field("destination") %>
 
-	<%= f.label :quantity %>
-	<%= f.select :quantity, options_for_select(1..10), :prompt => "Select Quantity" %> <%= flash_for_field("quantity") %>
+		<br>
+		<br>
 
-	<br>
-	<br>
+		<%= f.label :quantity %>
+		<%= f.select :quantity, options_for_select(1..10), :prompt => "Select Quantity" %> <%= flash_for_field("quantity") %>
 
-	<%= f.label :cost %>
-	<%= f.text_field :cost, :prompt => "0" %> <%= flash_for_field("cost") %>
-	<br>
-	<br>
+		<br>
+		<br>
 
-	<%= f.submit %>
-<% end %>
+		<%= f.label :cost %>
+		<%= f.text_field :cost, :prompt => "0" %> <%= flash_for_field("cost") %>
+		<br>
+		<br>
+
+		<%= f.submit %>
+	<% end %>
+
+</div>
+
+
+
+<script>
+ var initialModal = new Custombox.modal({
+      content: {
+        effect: 'fadein',
+        target: '.jobForm'
+      }
+    });
+    initialModal.open();
+</script>

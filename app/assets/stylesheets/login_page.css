@@ -1,0 +1,43 @@
+
+body {
+	background-image: url("http://www.neighborhoodparcel.com/wp-content/uploads/2015/03/ocean-cargo-1024x682.jpg");
+	background-size: cover;
+}
+
+.login_container {
+	display: none;
+	background-color: grey;
+	width: 250px;
+	height: 250px;
+	text-align: center;
+	border-radius: 3px;
+}
+
+.signup_container {
+	display: none;
+	background-color: grey;
+	width: 250px;
+	height: 250px;
+	text-align: center;
+	border-radius: 3px;
+}
+
+.passwordContainer {
+	display: none;
+	background-color: grey;
+	width: 250px;
+	height: 250px;
+	text-align: center;
+	border-radius: 3px;
+}
+
+.jobForm {
+	display: none;
+	background-color: grey;
+	width: 250px;
+	height: 250px;
+	text-align: center;
+	border-radius: 3px;
+}
+
+
